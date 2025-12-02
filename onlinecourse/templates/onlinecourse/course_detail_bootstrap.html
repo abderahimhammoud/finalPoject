@@ -54,7 +54,7 @@
         {% endfor %}
     </div>
     <!-- Course detail template changes go here -->
-    {% user is_authenticated %}
+    {% if user.is_authenticated %}
     </br>
     <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#exam">Start Exam</button>
     <div id="exam" class="collapse">
@@ -77,11 +77,10 @@
                 </div>
             </div>
             {% endfor %}
+            <input class="btn btn-success btn-block" type="submit" value="Submit">
         </form>
     </div>
-
     {% endif %}
-    </div>
 </body>
 
 </html>
